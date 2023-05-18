@@ -1,0 +1,6 @@
+#Ignore feed files
+*.xml
+#Ignore node_modules
+node_modules
+pnpm-lock.yaml
+.idea
