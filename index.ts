@@ -7,15 +7,6 @@ import ErrnoException = NodeJS.ErrnoException;
 const {JSDOM} = jsdom;
 global.DOMParser = new JSDOM().window.DOMParser;
 
-interface Product {
-    ExternalId: string | null;
-    ImageUrl: string;
-    ImageUrlLocalized: string;
-}
-interface Backlog {
-    PID: string;
-    success: boolean;
-}
 readFile('pfeedku.xml', (err: ErrnoException | null, data: Buffer): void => {
     if(err){
         throw new Error(err.message);
